@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeddff">
+
+
+    <Button
+        android:id="@+id/howButton"
+        android:layout_width="54dp"
+        android:layout_height="59dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:background="#8800FF"
+        android:text="\u003F"
+        android:textColor="#ffffff" />
+
+
+    <ImageView
+        android:id="@+id/satifactionlvlemoji"
+        android:layout_width="186dp"
+        android:layout_height="180dp"
+        android:layout_above="@+id/displaysection"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="44dp"
+        android:src="@drawable/happy" />
+
+    <ProgressBar
+        android:id="@+id/colorMatchBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/displaysection"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="-42dp"
+        android:layout_marginBottom="86dp"
+        android:max="100"
+        android:rotation="-90" />
+
+    <LinearLayout
+        android:id="@+id/displaysection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@id/colorStatisticBar"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:id="@+id/targetColorLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/targetColorTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Target color"
+                android:gravity="center"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/targetColorBox"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/targetColorTextView"
+                android:background="@android:color/holo_orange_light" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/userColorLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/userColorTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Your color: 0%"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/userColorBox"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/userColorTextView"
+                android:background="@android:color/white" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <!-- Statistic bar-->
+    <LinearLayout
+        android:id="@+id/colorStatisticBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/controlSection"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <!-- Controls section -->
+    <LinearLayout
+        android:id="@+id/controlSection"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:baselineAligned="false">
+
+        <!-- Color grid -->
+        <GridLayout
+            android:id="@+id/colorGrid"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:columnCount="3"
+            android:padding="5dp"
+            android:rowCount="4">
+
+            <!-- Primary colors -->
+            <View
+                android:id="@+id/userColorBoxR"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="#ff0000" />
+
+            <View
+                android:id="@+id/userColorBoxY"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="#ffff00"/>
+
+            <View
+                android:id="@+id/userColorBoxB"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="#0000ff"/>
+
+<!--            Other colors-->
+            <View
+                android:id="@+id/userColorBoxC"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="#00edff"/>
+
+            <View
+                android:id="@+id/userColorBoxG"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="#00b500"/>
+
+            <View
+                android:id="@+id/userColorBoxM"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="#ff00ab"/>
+
+            <View
+                android:id="@+id/userColorBoxBlack"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="#000000"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="#808080"/>
+
+            <View
+                android:id="@+id/userColorBoxWhite"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dp"
+                android:background="#ffffff"/>
+
+        </GridLayout>
+
+        <!-- Number control -->
+        <LinearLayout
+            android:id="@+id/numberControlLayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Plus button -->
+            <Button
+                android:id="@+id/plusButton"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:text="+"
+                android:background="#8800FF"
+                android:textColor="#FFFFFF" />
+
+            <!-- Number display -->
+            <TextView
+                android:id="@+id/colorunitcount"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#000000" />
+
+            <!-- Minus button -->
+            <Button
+                android:id="@+id/minusButton"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="#8800FF"
+                android:text="-"
+                android:textColor="#FFFFFF" />
+
+            <!-- Reset button -->
+            <Button
+                android:id="@+id/resetButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="5dp"
+                android:text="Reset"
+                android:background="#8800FF"
+                android:textColor="#FFFFFF" />
+
+            <!-- Submit button -->
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="5dp"
+                android:text="Submit"
+                android:background="#8800FF"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
